@@ -1,0 +1,153 @@
+<html><head>
+    <meta charset="UTF-8"> 
+    <script src="state_machine.js"></script>
+    <!--  -->
+    <script src="libs/hasplayer.min.js"></script>
+    <script src="range.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="globals.js"></script>
+    <link rel="stylesheet" href="pstyle.css">
+    <link rel="stylesheet" href="libs/animate.min.css">
+    <link rel="stylesheet" href="libs/material_icons.css">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@0.8.9/dist/hls.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.5/dist/dash.all.min.js"></script></head><body>
+    <div id="player-container" style="width: 1318px;">
+        <video id="player" class="responsive" style="width: 1318px; cursor: none;"></video>
+    </div>
+        <div id="media-url-form" class="row collapsed input-popup">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s10">
+                    <label for="media-url-input">Media url</label>
+                    <input type="text" id="media-url-input">
+                </div>
+                <div class="input-field col s1">
+                    <button id="reload-source-media-url-btn" class="waves-effect waves-light btn" type="button">
+                      <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field row s12">
+                    <a data-target="media_url_form" class="close-input waves-effect waves-red btn-flat"><i data-target="media_url_form" class="material-icons control">keyboard_arrow_up</i></a>
+                </div>
+            </div>
+        </form>
+    </div>        <div id="subtitles-url-form" class="row collapsed input-popup">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s10">
+                    <label for="subtitles-url-input">Subtitles url</label>
+                    <input type="text" id="subtitles-url-input">
+                </div>
+                <div class="input-field col s1">
+                    <button id="load-subtitles-url-btn" class="waves-effect waves-light btn" type="button">
+                      <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field row s12">
+                    <a data-target="subtitles_url_form" class="close-input waves-effect waves-red btn-flat"><i data-target="subtitles_url_form" class="material-icons control">keyboard_arrow_up</i></a>
+                </div>
+            </div>
+        </form>
+    </div>        <div id="la-url-form" class="row collapsed input-popup">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s10">
+                    <label for="la-url">License url</label>
+                    <input type="text" id="la-url">
+                </div>
+                <div class="input-field col s1">
+                    <button id="reload-source-la-url-btn" class="waves-effect waves-light btn" type="button">
+                      <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field row s12">
+                    <a data-target="la_url_form" class="close-input waves-effect waves-red btn-flat"><i data-target="la_url_form" class="material-icons control">keyboard_arrow_up</i></a>
+                </div>
+            </div>
+        </form>
+    </div>        <div id="headers-form" class="row collapsed input-popup">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s5">
+                    <label for="header-name">Header</label>
+                    <input type="text" id="header-name">
+                </div>
+                <div class="input-field col s5">
+                    <label for="header-value">Value</label>
+                    <input type="text" id="header-value">
+                </div>
+                <div class="input-field col s1">
+                    <button id="add-header-btn" class="waves-effect waves-light btn" type="button">
+                      <i class="material-icons right">playlist_add</i>
+                    </button>
+                </div>
+                <div class="input-field col s1">
+                    <button id="headers-reload-player-btn" class="waves-effect waves-light btn" type="button">
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <ul id="header-list-view">
+                </ul>
+            </div>
+            <div class="input-field row s12">
+                <a data-target="headers_form" class="close-input waves-effect waves-red btn-flat"><i data-target="headers_form" class="material-icons control">keyboard_arrow_up</i></a>
+            </div>
+        </form>
+    </div>        <div id="settings-form" class="animated white-bg fadeInRight">
+        <ul id="settings-form-list">
+            <li>
+                <a id="media-url-toggle-btn" class="waves-effect waves-red btn-flat">Change Media URL</a>
+            </li>
+            <li>
+                <a id="subtitles-toggle-btn" class="waves-effect waves-red btn-flat">Link Subtitles</a>
+            </li>
+            <li>       
+                <a id="la-url-toggle-btn" class="waves-effect waves-red btn-flat">Change License URL</a>
+            </li>
+            <li>
+                <a id="headers-toggle-btn" class="waves-effect waves-red btn-flat">Add request headers</a>
+            </li>
+            <li>
+                <div id="playback-speed-selection" style="overflow: hidden; height: 41px;">
+                <div><a class="waves-effect waves-red btn-flat dropdown-label">Playback speed: x1</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="0.25" data-label="x0.25">x0.25</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="0.5" data-label="x0.5">x0.5</a></div><div class="selected" style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1" data-label="x1">x1</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1.25" data-label="x1.25">x1.25</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1.5" data-label="x1.5">x1.5</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="2" data-label="x2">x2</a></div></div>
+            </li>
+            <li>
+                <div id="bitrate-selection" style="overflow: hidden; height: 41px;">
+                <div><a class="waves-effect waves-red btn-flat dropdown-label">Bitrate</a></div></div>
+            </li>
+        </ul>
+    </div>    <div id="controls" class="animated fadeOut">
+        <div id="controls-left">
+            <div id="playback">
+                <a id="play-pause" class="waves-effect waves-red btn-flat"><i class="material-icons control">play_arrow</i></a>
+            </div>
+            <div id="time" class="collapsed"></div>
+            
+        </div>
+        <div id="controls-center" style="width: 959.64px;">
+            <div id="progress" class="collapsed"><div style="border: 1px solid white; cursor: pointer; height: 4px; width: 100%;"><div style="height: 4px; float: left; background-color: white;"></div><div style="border-radius: 100%; background-color: red; width: 15px; height: 15px; cursor: pointer; float: left; margin-left: -10px; margin-top: -6px;"></div></div></div>
+        </div>
+        <div id="controls-right">
+            <div id="duration" class="collapsed"></div>
+            <div id="volume">
+                <a id="volume-btn" class="waves-effect waves-red btn-flat"><i class="material-icons control">volume_mute</i></a>
+                <div id="volume-popup" class="fadeOut collapsed"><div id="volume-control-container" class=""><div style="border: 1px solid white; cursor: pointer; width: 4px; height: 100%; background-color: white;"><div style="width: 2px; height: 100%; background-color: black;"></div><div style="border-radius: 100%; background-color: red; width: 15px; height: 15px; cursor: pointer; margin-left: -6px; margin-top: -10px;"></div></div></div></div>
+            </div>
+            <div id="settings">
+                <a id="settings-btn" class="waves-effect waves-red btn-flat"><i class="material-icons control">settings</i></a>
+            </div>
+            <div id="fullscreen">
+                <a id="fullscren-toggle-btn" class="waves-effect waves-red btn-flat"><i class="material-icons control">fullscreen</i></a>
+            </div>
+        </div>
+    </div>    <img id="loader" src="assets/loader.svg" alt="Loading...">
+    <script src="ui_mapping.js"></script>
+    <script src="controls.js"></script>
+    <script src="dash_tech.js"></script>
+    <script src="hls_tech.js"></script>
+    <script src="smooth_tech.js"></script>
+    <script src="player.js"></script>
+    <script src="index.js"></script>
+
+ </body></html>
