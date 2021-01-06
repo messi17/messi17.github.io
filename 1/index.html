@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<!-- Copyright (C) 2017 David Ćavar -->
-<html>
-<head>
+<html><head>
     <meta charset="UTF-8"> 
     <script src="state_machine.js"></script>
     <!--  -->
@@ -12,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="libs/animate.min.css">
     <link rel="stylesheet" href="libs/material_icons.css">
-</head><body>
-    <div id="player-container">
-        <video id="player" class="responsive"></video>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@0.8.9/dist/hls.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.5/dist/dash.all.min.js"></script></head><body>
+    <div id="player-container" style="width: 978px;">
+        <video id="player" class="responsive" preload="auto" src="blob:chrome-extension://cjfbmleiaobegagekpmlhmaadepdeedn/1973fe16-7f54-417e-aad0-650353ff6e08" autoplay="" style="width: 978px; cursor: none;"></video>
     </div>
         <div id="media-url-form" class="row collapsed input-popup">
         <form class="col s12">
@@ -97,7 +94,7 @@
                 <a data-target="headers_form" class="close-input waves-effect waves-red btn-flat"><i data-target="headers_form" class="material-icons control">keyboard_arrow_up</i></a>
             </div>
         </form>
-    </div>        <div id="settings-form" class="animated collapsed white-bg">
+    </div>        <div id="settings-form" class="animated white-bg fadeOutRight">
         <ul id="settings-form-list">
             <li>
                 <a id="media-url-toggle-btn" class="waves-effect waves-red btn-flat">Change Media URL</a>
@@ -112,30 +109,29 @@
                 <a id="headers-toggle-btn" class="waves-effect waves-red btn-flat">Add request headers</a>
             </li>
             <li>
-                <div id="playback-speed-selection">
-                </div>
+                <div id="playback-speed-selection" style="overflow: hidden; height: 41px;">
+                <div><a class="waves-effect waves-red btn-flat dropdown-label">Playback speed: x1</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="0.25" data-label="x0.25">x0.25</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="0.5" data-label="x0.5">x0.5</a></div><div class="selected" style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1" data-label="x1">x1</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1.25" data-label="x1.25">x1.25</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1.5" data-label="x1.5">x1.5</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="2" data-label="x2">x2</a></div></div>
             </li>
             <li>
-                <div id="bitrate-selection">
-                </div>
+                <div id="bitrate-selection" style="overflow: hidden; height: 287px;"><div><a class="waves-effect waves-red btn-flat dropdown-label">Bitrate: 480</a></div><div class="" style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="-1" data-label="Auto">Auto</a></div><div class="" style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="0" data-label="360">360</a></div><div class="selected" style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="1" data-label="480">480</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="2" data-label="576">576</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="3" data-label="720">720</a></div><div style="padding-left: 20px;"><a class="waves-effect waves-red btn-flat dropdown-option" data-value="4" data-label="720">720</a></div></div>
             </li>
         </ul>
-    </div>    <div id="controls" class="animated">
+    </div>    <div id="controls" class="animated fadeOut">
         <div id="controls-left">
             <div id="playback">
-                <a id="play-pause" class="waves-effect waves-red btn-flat"><i class="material-icons control">play_arrow</i></a>
+                <a id="play-pause" class="waves-effect waves-red btn-flat"><i class="material-icons control">pause</i></a>
             </div>
-            <div id="time" class="collapsed"></div>
+            <div id="time" class="collapsed"><span>447203:17:28</span></div>
             
         </div>
-        <div id="controls-center">
-            <div id="progress"></div>
+        <div id="controls-center" style="width: 626.44px;">
+            <div id="progress" class="collapsed"><div style="border: 1px solid white; cursor: pointer; height: 4px; width: 100%;"><div style="height: 4px; float: left; background-color: white; width: 1.78738e-05%;"></div><div style="border-radius: 100%; background-color: red; width: 15px; height: 15px; cursor: pointer; float: left; margin-left: -10px; margin-top: -6px;"></div></div></div>
         </div>
         <div id="controls-right">
             <div id="duration" class="collapsed"></div>
             <div id="volume">
                 <a id="volume-btn" class="waves-effect waves-red btn-flat"><i class="material-icons control">volume_mute</i></a>
-                <div id="volume-popup" class="collapsed"><div id="volume-control-container"></div></div>
+                <div id="volume-popup" class="fadeOut collapsed"><div id="volume-control-container" class=""><div style="border: 1px solid white; cursor: pointer; width: 4px; height: 100%; background-color: white;"><div style="width: 2px; height: 100%; background-color: black;"></div><div style="border-radius: 100%; background-color: red; width: 15px; height: 15px; cursor: pointer; margin-left: -6px; margin-top: -10px;"></div></div></div></div>
             </div>
             <div id="settings">
                 <a id="settings-btn" class="waves-effect waves-red btn-flat"><i class="material-icons control">settings</i></a>
@@ -144,7 +140,7 @@
                 <a id="fullscren-toggle-btn" class="waves-effect waves-red btn-flat"><i class="material-icons control">fullscreen</i></a>
             </div>
         </div>
-    </div>    <img id="loader" src="assets/loader.svg" alt="Loading...">
+    </div>    <img id="loader" src="assets/loader.svg" alt="Loading..." style="visibility: collapse;">
     <script src="ui_mapping.js"></script>
     <script src="controls.js"></script>
     <script src="dash_tech.js"></script>
@@ -152,5 +148,5 @@
     <script src="smooth_tech.js"></script>
     <script src="player.js"></script>
     <script src="index.js"></script>
-</body>
-</html> 
+
+ </body></html>
