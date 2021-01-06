@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+    Modifications copyright (C) 2017 David Ćavar
+-->
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Native HLS Settings</title>
+        <style>body { padding: 10px; }</style>
+    </head>
+    <body>
+        <!--  -->
+
+        <p>
+            <label for="hlsjsSel">
+                hls.js version:
+                <select id="hlsjsSel">
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="dashjsSel">
+                dashjs version:
+                <select id="dashjsSel">
+                </select>
+            </label>
+        </p>
+        <!--  -->
+        
+        <p>
+            <label for="maxQuality">
+                Automatically play videos at maximum quality:
+                <input type="checkbox" id="maxQuality">
+                </label>
+        </p>
+        <p>
+            <label for="cbDebug">
+                debug:
+                <input type="checkbox" id="cbDebug">
+                </label>
+        </p>
+        <p>
+            <label for="video-native-mode">
+                Maintain original video size:
+                <input type="checkbox" id="video-native-mode">
+                </label>
+        </p>
+        <button id="saveSettings">Save</button>
+        <span id="status"></span>
+    </body>
+    <script src="ajax.js"></script>
+    <script src="state_machine.js"></script>
+    <script src="globals.js"></script>
+    <script src="options.js"></script>
+</html>
