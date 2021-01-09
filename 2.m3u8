@@ -12,8 +12,8 @@ https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdn
 https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1610203712~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=a299eaa284f12665cff72c380ea406d20f88c3a3994b432a8aff813f20d1d9fe/beinsports01-audio=96000-video=1200000.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=2444000,AVERAGE-BANDWIDTH=2222000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=1024x576,FRAME-RATE=60,VIDEO-RANGE=SDR,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
 https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1610203712~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=a299eaa284f12665cff72c380ea406d20f88c3a3994b432a8aff813f20d1d9fe/beinsports01-audio=96000-video=2000000.m3u8
-https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1610203712~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=a299eaa284f12665cff72c380ea406d20f88c3a3994b432a8aff813f20d1d9fe/#EXT-X-STREAM-INF:BANDWIDTH=3844000,AVERAGE-BANDWIDTH=3494000,CODECS="mp4a.40.2,avc1.64001F",RESOLUTION=1280x720,FRAME-RATE=60,VIDEO-RANGE=SDR,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-beinsports01-audio=96000-video=3200000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3844000,AVERAGE-BANDWIDTH=3494000,CODECS="mp4a.40.2,avc1.64001F",RESOLUTION=1280x720,FRAME-RATE=60,VIDEO-RANGE=SDR,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
+https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1610203712~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=a299eaa284f12665cff72c380ea406d20f88c3a3994b432a8aff813f20d1d9fe/beinsports01-audio=96000-video=3200000.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=5359000,AVERAGE-BANDWIDTH=4872000,CODECS="mp4a.40.2,avc1.640028",RESOLUTION=1920x1080,FRAME-RATE=60,VIDEO-RANGE=SDR,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
 https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1610203712~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=a299eaa284f12665cff72c380ea406d20f88c3a3994b432a8aff813f20d1d9fe/beinsports01-audio=96000-video=4499968.m3u8
 
