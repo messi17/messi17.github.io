@@ -1,119 +1,30 @@
+<script type="text/javascript" src="https://cdn.jwplayer.com/libraries/KZe6iLHP.js"></script>    <script>jwplayer.key="ABCdeFG123456SeVenABCdeFG123456SeVen=="></script>
+<div id="myElement">&nbsp;</div>
+<script type="text/JavaScript">
 
-<style type="text/css">.bmpui-ui-watermark {
-  display: none;
-}</style><script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7.8.21/bitmovinplayer.js"></script>
-<div id="player">&nbsp;</div>
-<script type="text/javascript">
-    const conf = {
-  key: '669a4369-809d-4378-bf65-5b35f9b991a4',
-  playback: {
-    autoplay: true
-  } 
-};
-    var player = bitmovin.player("player");
-    player.setup(conf).then(function(value) {
-        // Success
-        console.log("Successfully created bitmovin player instance");
-    }, function(reason) {
-        // Error!
-        console.log("Error while creating bitmovin player instance");
-    });
-</script>  <script>
-function switchChannel(channelID) {
-  var source;
-  if (channelID === '1') {
-    source = {
-      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01__720p.m3u8'
-    };
-  } else if (channelID === '2') {
-    source = {
-      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_720p.m3u8'
-    };
-  } else if  (channelID === '3') {
-    source = {
-      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_576p.m3u8'
-    };
-    } else if (channelID === '4') {
-    source = {
-      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_360p.m3u8'
-    };
-    } else if (channelID === '5') {
-    source = {
-      hls: 'https://tv-trtspor1.medya.trt.com.tr/master.m3u8'
-    }; 
-    } else if (channelID === '6') {
-    source = {
-      hls: 'https://tv-trtavaz.medya.trt.com.tr/master.m3u8'
-    };
-    } else if (channelID === '7') {
-    source = {
-      hls: 'https://dt-live-sports.akamaized.net/wmt:eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI5MjdjZWE3ZWE2NjNhYjA0ZTVhZGJmYmI1ZDYzNDI2In0.eyJpc3MiOiJ1cm46ZmxhbWluaG9vcCIsImlhdCI6MTYyMDIwMTYwMSwiZXhwIjoxNjM2MDk5MjAxLCJ3bXZlciI6MSwid21pZGZtdCI6ImhleCIsIndtaWQiOiIzQ0FCMzM3OTcyOTdBQkMzMEZERDg0MDQ2N0Q4NzUyQiJ9.o_qvZw6sdu_AkCahU7kz44pt4F-ajB-0TRbWxmZlGnFBNkuNOpILOpKAjzFzXcqDdDtCMlHGKdHjOodJa1YgFOzVnvvg8MwUR81a_q-QmF_GZyD5ixVc5yoAfbwvz_wCFSUB9Ig4KNS_Ask6BfripJUFll_9-q6P4ZD2wD3aNXUDbXA0phCSrYm6ESXvexvV4wEU4tN4aP34c-lUHKzqc4kL0AgsV_g1BlYd07G-vTOuKfMVuEGT_LWAqVaMYfYKHfdl3JCfnay9NOLzrrDcBNs89vkRRMyjwl_g67Iapgz78GXacfcYAQLb2JfGVWRn94biXPBgd9qBR7009DodQg/embedder/post-packager/v1/unified-origin/beinsports01/beinsports01.isml/playlist.m3u8'
-    };
-    } else if (channelID === '8') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/look/livestream/playlist.m3u8'
-    };
-    } else if (channelID === '9') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksport2/livestream/playlist.m3u8'
-    };
-    } else if (channelID === '10') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksport3/livestream/playlist.m3u8'
-    };
-    } else if (channelID === '11') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/lookplus/livestream/playlist.m3u8'
-    };
-    } else if (channelID === '12') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksport3/livestream/playlist.m3u8'
-    };
-    } else if (channelID === '13') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksportppv1/livestream/playlist.m3u8'
-    }
-    } else if (channelID === '14') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksportppv2/livestream/playlist.m3u8'
-    };
-    } else if (channelID === '15') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksportppv3/livestream/playlist.m3u8'
-  };
-}  else if (channelID === '16') {
-    source = {
-      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_480p.m3u8'
-  };
-    } else if (channelID === '17') {
-    source = {
-      hls: 'https://stream1.1616.ro:1945/looksportppv4/livestream/playlist.m3u8'
-  };
-} else if (channelID === '18') {
-    source = {
-      hls: 'https://media.primaplay.ro/live/lookplus/playlist.m3u8?from=1631628344&to=1631631620&session=EYQEL4eecbS5yy6G&source=cms&token=B_vatPtl9ymYRGEWCowJFxX1BFw='
-  };
-} else if (channelID === '19') {
-    source = {
-      hls: 'https://protection.monit.work/o/bein-sports-3'
-  };
-} else if (channelID === '20') {
-    source = {
-      hls: 'https://protection.monit.work/o/bein-sports-3'
-  } } player.load(source); } 
-</script>
-<div class="row button-container">
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch5" type="button" onclick="switchChannel('5', event)">trt spor</button><button class="channel-button btn btn-success" id="ch6" type="button" onclick="switchChannel('6', event)">Trt avaz</button><button class="channel-button btn btn-success" id="ch7" type="button" onclick="switchChannel('7', event)">otomatik</button><button class="channel-button btn btn-success" id="ch4" type="button" onclick="switchChannel('4', event)">400 kalite</button><button class="channel-button btn btn-success" id="ch3" type="button" onclick="switchChannel('3', event)">1500 kalite</button><button class="channel-button btn btn-success" id="ch2" type="button" onclick="switchChannel('2', event)">1800 kalite</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch18" type="button" onclick="switchChannel('18', event)">boş</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch19" type="button" onclick="switchChannel('19', event)">1 </button></div>
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch16" type="button" onclick="switchChannel('16', event)">900 kalite</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch1" type="button" onclick="switchChannel('1', event)">2400 Kalite</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch8" type="button" onclick="switchChannel('8', event)">look sport</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch9" type="button" onclick="switchChannel('9', event)">look sport 2</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch10" type="button" onclick="switchChannel('10', event)">look sport 3</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-success" id="ch11" type="button" onclick="switchChannel('11', event)">look sport plus</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch13" type="button" onclick="switchChannel('13', event)">look sport ppv 1</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch14" type="button" onclick="switchChannel('14', event)">look sport ppv 2</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch15" type="button" onclick="switchChannel('15', event)">look sport ppv 3</button></div>
-<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch17" type="button" onclick="switchChannel('17', event)">look sport ppv 4</button></div>
-</div>
+      jwplayer("myElement").setup({
+        "playlist": [{
+            "file":
+"https://umt01.videobulut.com/1/3165/2wfC32wsT7sV/2wfC32wsT7sV.m3u8",
+"image": ""
+        },{
+            "file": "https://umt01.videobulut.com/1/3165/TX322fKj2Ed9/TX322fKj2Ed9.m3u8",
+"image": "https://cdn.ssportplus.com/1/3165/7Tw9ZwChM195/7Tw9ZwChM195.jpg"
+        },{
+            "file": "https://dsmartgo-live.ercdn.net/smartspor/smartspor.m3u8?st=wUY3N6Ta6FnmLQrQ-XHFWA&e=1632602952",
+"image": ""
+        },
+{
+            "file": "https://dt-live-bc-beinsports01.akamaized.net/ppv/beinsports01/beinsports01.isml/playlist.m3u8?hdnts=ip=88.241.47.185~exp=1632660898~acl=/*~id=ac7810644~hmac=57adca76d60fe30633e064f9938341b091efb455efceda50ba3c4ee7a3edf695",
+"image": ""
+        },
+{
+            "file": "https://dt-live-bc-beinsports04.akamaized.net/ppv/beinsports04/beinsports04.isml/hdntl=exp=1621251785~acl=%2f*~id=ac7810644~data=hdntl~hmac=f014a60b1205c38e251ac351e3e33502829a9529dcfdaa6cffe540f907ca4182/ppv.m3u8",
+"image": ""
+        },
+{
+            "file": "https://dt-live-bc-beinsports02.akamaized.net/ppv/beinsports02/beinsports02.isml/hdntl=exp=1621251785~acl=%2f*~id=ac7810644~data=hdntl~hmac=f014a60b1205c38e251ac351e3e33502829a9529dcfdaa6cffe540f907ca4182/ppv.m3u8",
+"image": ""
+        },]
+      });
+    </script>
