@@ -1,5 +1,4 @@
-Yeni: Klavye kısayolları … Drive klavye kısayolları, işlevlerin ilk harflerini kullanarak gezinebileceğiniz şekilde güncellendi.
-﻿function performSearch() {
+function performSearch() {
     // Arama sorgusu
     let query = document.getElementById('searchQuery').value;
 
